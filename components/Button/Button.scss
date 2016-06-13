@@ -1,0 +1,28 @@
+$borderColor: #E0F2F1;
+$bgColor: #009688;
+
+.button {
+	margin:5px;
+	background: $bgColor;
+	border-radius:20px;
+	text-align: center;
+	cursor:pointer;
+	
+	height:100%;
+	width:50px;
+}
+
+.button:hover{
+	background-color: $borderColor;
+}
+
+h1.btn{
+	display: inline;
+	padding:0px;
+	margin:0px;
+}
+
+i.btn{
+	padding:0px;
+	margin:0px;
+}

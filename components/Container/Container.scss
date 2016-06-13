@@ -1,0 +1,18 @@
+$borderColor: #009688;
+$bgColor: #009688;
+
+div.sContainer{
+      width: 600px;
+      height: 600px;
+      background: $bgColor;
+      margin-left: 25%;
+      margin-right: 25%;
+      border-radius: 10px;
+      overflow: hidden;
+      border:{
+            style: solid;
+            color:$borderColor;
+      }
+      display:flex;
+      flex-direction: column;
+}

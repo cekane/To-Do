@@ -1,0 +1,31 @@
+$borderColor: #009688;
+.flex{
+	height: auto;
+	overflow: hidden;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	border-bottom: {
+		style: solid;
+		color:$borderColor;
+	}
+	align-items: center;
+}
+h1.ta{
+	display: inline;
+	margin:20px;
+}
+input.ta{
+	height: 40px;	
+	width:100%;
+	margin:20px;
+	display:inline;
+}
+
+.flex > div {
+	flex: 1 1 auto;
+}
+
+.flex > div:nth-child(1){ flex-grow: 1; }
+.flex > div:nth-child(2){ flex-grow: 4; }
+.flex > div:nth-child(3){ flex-grow: 1; }
