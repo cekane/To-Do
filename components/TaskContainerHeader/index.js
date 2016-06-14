@@ -16,7 +16,13 @@ export class TaskContainerHeader extends React.Component {
 				
 				<div>
 					<center>
-						<Button icon={ "delete" } ></Button>
+						<Button icon={ "delete" }  onClick={e=>
+							{
+								e.preventDefault()
+								this.props.removeTask()
+							}
+						}
+						></Button>
 					</center>
 				</div>
 			</div>

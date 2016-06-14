@@ -33,18 +33,23 @@ const todos = (state = {todos: []}, action)=> {
 			}
 		);
 		case 'REMOVE_TASK':
-			return;
+			var nTodos = state.todos.filter(t=>t.completed===false)
+			console.log("AFTER DELETE", nTodos)
+			return Object.assign(
+				{},
+				state,
+				{
+					todos: nTodos
+				})
 		case 'TOGGLE_COMPLETED':
-			console.log("before filter", state)
-			var test =state.todos.map( t=> 
+			var nTodos =state.todos.map( t=> 
 				todo(t,action)
 				)
-			console.log("After filter", test)
 			return Object.assign(
 			{},
 			state,
 			{
-				todos: test
+				todos: nTodos
 			});
 		default:
 			return state;
