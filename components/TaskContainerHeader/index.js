@@ -16,7 +16,6 @@ export class TaskContainerHeader extends React.Component {
 					<label className={ lstyle }>
 						<input className = { istyle } type="checkbox" onClick={ e=>{
 								var checkedValue = e.target.checked
-								console.log(checkedValue)
 								this.props.toggleAllTasks(checkedValue) 
 							}
 							}/>
@@ -24,13 +23,28 @@ export class TaskContainerHeader extends React.Component {
 					</label>
 				</div>
 				<div>
-					<Button text={ "To-do" }></Button>
+					<Button text={ "To-do" } onClick={
+						e=>{
+							e.preventDefault()
+							this.props.filterToDo()
+						}
+					}></Button>
 				</div>
 				<div>
-					<Button text={ "Finished" }></Button>
+					<Button text={ "Finished" } onClick={
+						e=>{
+							e.preventDefault()
+							this.props.filterFinished()
+						}
+					}></Button>
 				</div>
 				<div>
-					<Button text={ "All" }></Button>
+					<Button text={ "All" } onClick={
+						e=>{
+							e.preventDefault()
+							this.props.filterAll()
+						}
+					}></Button>
 				</div>
 				<div>
 					<center>

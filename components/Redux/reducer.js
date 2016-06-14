@@ -13,12 +13,35 @@ const todo = (state, action)=> {
 			return Object.assign({}, state, {
 				completed: action.value
 			})
+		case 'FILTER_TO_DO':
+			if(state.completed === false){
+				return Object.assign({}, state, {
+					visable: true
+				})
+			}
+			return Object.assign({}, state, {
+				visable: false
+			})
+		case 'FILTER_FINISHED':
+			if(state.completed === true){
+				return Object.assign({}, state, {
+					visable: true
+				})
+			}
+			return Object.assign({}, state, {
+				visable: false
+			})
+		case 'FILTER_ALL':
+			return Object.assign({}, state, {
+				visable: true
+			})
 		default:
 			return state;
 	}
 };
 
 const todos = (state = {todos: []}, action)=> {
+	console.log("action in reducer", action.type)
 	var uuid = require('node-uuid');
 	switch (action.type){
 		case 'ADD_TASK':
@@ -30,7 +53,8 @@ const todos = (state = {todos: []}, action)=> {
 						{
 							id: uuid.v4(),
 							completed: false, 
-							text: action.text
+							text: action.text,
+							visable: true
 						}, 
 						...state.todos
 						]
@@ -38,7 +62,6 @@ const todos = (state = {todos: []}, action)=> {
 		);
 		case 'REMOVE_TASK':
 			var nTodos = state.todos.filter(t=>t.completed===false)
-			console.log("AFTER DELETE", nTodos)
 			return Object.assign(
 				{},
 				state,
@@ -66,6 +89,36 @@ const todos = (state = {todos: []}, action)=> {
 			{
 				todos: nTodos
 			});
+		case 'FILTER_TO_DO':
+			var nTodos = state.todos.map(t=>
+				todo(t,action))
+			console.log(nTodos)
+			return Object.assign(
+				{},
+				state,
+				{
+					todos: nTodos
+				})
+		case 'FILTER_FINISHED':
+			var nTodos = state.todos.map(t=>
+				todo(t,action))
+			console.log(nTodos)
+			return Object.assign(
+				{},
+				state,
+				{
+					todos: nTodos
+				})
+		case 'FILTER_ALL':
+			var nTodos = state.todos.map(t=>
+				todo(t,action))
+			console.log(nTodos)
+			return Object.assign(
+				{},
+				state,
+				{
+					todos: nTodos
+				})
 		default:
 			return state;
 	}

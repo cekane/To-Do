@@ -25,6 +25,24 @@ var actions = {
 			type : 'TOGGLE_ALL_COMPLETED',
 			value : val
 		}
+	},
+
+	filterToDo: function(){
+		return{
+			type : 'FILTER_TO_DO'
+		}
+	},
+
+	filterFinished: function(){
+		return{
+			type : 'FILTER_FINISHED'
+		}
+	},
+
+	filterAll: function(){
+		return{
+			type : 'FILTER_ALL'
+		}
 	}
 };
 
