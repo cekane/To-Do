@@ -11,6 +11,13 @@ var actions = {
 			type: 'ADD_TASK',
 			text: text
 		};
+	},
+
+	toggleTask: function(id){
+		return {
+			type : 'TOGGLE_COMPLETED',
+			id: id
+		};
 	}
 };
 

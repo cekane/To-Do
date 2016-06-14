@@ -1,5 +1,6 @@
 module.exports = {
 	entry: './main.js',
+	devtool: "source-map",
 	output: {
 		path: './',
 		filename: 'index.js'
@@ -21,8 +22,11 @@ module.exports = {
 			{ 
 				test: /\.scss$/,
 				loaders: ["style", "css?modules", "sass"]
-    		}
-			
+    		},
+    		{
+		        test: /\.js$/,
+		        loader: "source-map-loader"
+		    }
 		]
 	}
 }

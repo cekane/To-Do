@@ -10,13 +10,13 @@ export class TaskContainer extends React.Component {
 		super(props);
 	}
 	render () {
-
 		return (
 			<div className={ tc }>
 				<TaskContainerHeader></TaskContainerHeader>
 				{
 					this.props.todos.map(function (todo, i) {
-            		return (<Tasks key={ i }>{todo.text}</Tasks>)}.bind(this))
+						console.log("Task ".concat(i), todo)
+            			return (<Tasks key={ i } id={todo.id} completed={todo.completed} toggleTask={ this.props.toggleTask} >{todo.text}</Tasks>)}.bind(this))
 				}
 			</div>
 		)

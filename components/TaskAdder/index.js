@@ -2,8 +2,6 @@ import React from 'react'
 
 import { ta, flex } from './TaskAdder.scss'
 import { Button } from '../Button'
-import { createStore } from 'redux'
-import { connect } from 'react-redux'
 import className from 'classnames'
 
 export class TaskAdder extends React.Component {

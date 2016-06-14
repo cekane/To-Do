@@ -4,7 +4,7 @@ import { sContainer } from './Container.scss'
 import { TaskAdder } from '../TaskAdder'
 import { TaskContainer } from '../TaskContainer'
 import { connect } from 'react-redux'
-import { addTask } from '../Redux/actions'
+import { addTask, toggleTask } from '../Redux/actions'
 import reducer from '../Redux/reducer';
 
 class _Container extends React.Component {
@@ -12,7 +12,7 @@ class _Container extends React.Component {
 		return(
 			<div className={ sContainer }>
 				<TaskAdder addTask={ this.props.addTask } />
-				<TaskContainer todos={ this.props.todos } />
+				<TaskContainer todos={ this.props.todos } toggleTask={this.props.toggleTask} />
 			</div>
 		)
 	}
@@ -23,6 +23,9 @@ export const Container = connect(
 		return { todos: state.todos };
 	},
 	function mapDispatchToProps(dispatch){
-		return { addTask: text => dispatch(addTask(text))}
+		return { 
+			addTask: text => dispatch(addTask(text)),
+			toggleTask: id => dispatch(toggleTask(id))
+		}
 	}
 )(_Container)
