@@ -12,7 +12,7 @@ export class TaskContainer extends React.Component {
 	render () {
 		return (
 			<div className={ tc }>
-				<TaskContainerHeader removeTask={this.props.removeTask}></TaskContainerHeader>
+				<TaskContainerHeader toggleAllTasks={this.props.toggleAllTasks} removeTask={this.props.removeTask}></TaskContainerHeader>
 				{
 					this.props.todos.map(function (todo, i) {
 						console.log("Task ".concat(i), todo)

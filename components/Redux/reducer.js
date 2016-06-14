@@ -9,6 +9,10 @@ const todo = (state, action)=> {
 			return Object.assign({}, state, {
 				completed: !state.completed
 			})
+		case 'TOGGLE_ALL_COMPLETED':
+			return Object.assign({}, state, {
+				completed: action.value
+			})
 		default:
 			return state;
 	}
@@ -45,6 +49,17 @@ const todos = (state = {todos: []}, action)=> {
 			var nTodos =state.todos.map( t=> 
 				todo(t,action)
 				)
+			return Object.assign(
+			{},
+			state,
+			{
+				todos: nTodos
+			});
+		case 'TOGGLE_ALL_COMPLETED':
+			var nTodos =state.todos.map( t=> 
+				todo(t,action)
+				)
+			console.log(action.value)
 			return Object.assign(
 			{},
 			state,

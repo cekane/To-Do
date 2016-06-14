@@ -18,6 +18,13 @@ var actions = {
 			type : 'TOGGLE_COMPLETED',
 			id: id
 		};
+	},
+
+	toggleAllTasks: function(val){
+		return{
+			type : 'TOGGLE_ALL_COMPLETED',
+			value : val
+		}
 	}
 };
 

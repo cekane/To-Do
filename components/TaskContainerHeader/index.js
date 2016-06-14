@@ -5,13 +5,23 @@ import { Button } from '../Button'
 import { createStore } from 'redux'
 
 export class TaskContainerHeader extends React.Component {
-
+	checkValue(checkbox)
+	{
+		set.state
+	}
 	render () {
 		return (
 			<div className = { tch }>
 				<div>
-					<label className={ lstyle }><input className = { istyle } type="checkbox"/>
-					Mark All</label>
+					<label className={ lstyle }>
+						<input className = { istyle } type="checkbox" onClick={ e=>{
+								var checkedValue = e.target.checked
+								console.log(checkedValue)
+								this.props.toggleAllTasks(checkedValue) 
+							}
+							}/>
+						Mark All
+					</label>
 				</div>
 				
 				<div>
