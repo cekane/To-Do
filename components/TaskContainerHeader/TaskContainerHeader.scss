@@ -31,5 +31,8 @@ h3.fstyle{
 	padding-left: 10px;
 }
 
-.tch > div:nth-child(1){ flex-grow: 7; }
-.tch > h3:nth-child(2){ flex-grow: 1; }
+.tch > div:nth-child(1){ flex-grow: 1; }
+.tch > div:nth-child(2){ flex-grow: 1; }
+.tch > div:nth-child(3){ flex-grow: 1; }
+.tch > div:nth-child(4){ flex-grow: 1; }
+.tch > h3:nth-child(5){ flex-grow: 1; }

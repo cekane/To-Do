@@ -23,7 +23,15 @@ export class TaskContainerHeader extends React.Component {
 						Mark All
 					</label>
 				</div>
-				
+				<div>
+					<Button text={ "To-do" }></Button>
+				</div>
+				<div>
+					<Button text={ "Finished" }></Button>
+				</div>
+				<div>
+					<Button text={ "All" }></Button>
+				</div>
 				<div>
 					<center>
 						<Button icon={ "delete" }  onClick={e=>

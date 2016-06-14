@@ -9,7 +9,7 @@ $bgColor: #42A5F5;
 	cursor:pointer;
 	
 	height:100%;
-	width:50px;
+	min-width: 50px;
 }
 
 .button:hover{
@@ -25,4 +25,9 @@ h1.btn{
 i.btn{
 	padding:0px;
 	margin:0px;
+	display:inline-block;
+}
+
+h4.tstyle{
+	display:inline-block;
 }
