@@ -23,7 +23,7 @@ export class TaskContainerHeader extends React.Component {
 					</label>
 				</div>
 				<div>
-					<Button text={ "To-do" } onClick={
+					<Button text={ "To-do" } color={"default"} onClick={
 						e=>{
 							e.preventDefault()
 							this.props.filterToDo()
@@ -31,7 +31,7 @@ export class TaskContainerHeader extends React.Component {
 					}></Button>
 				</div>
 				<div>
-					<Button text={ "Finished" } onClick={
+					<Button text={ "Finished" } color={"default"} onClick={
 						e=>{
 							e.preventDefault()
 							this.props.filterFinished()
@@ -39,7 +39,7 @@ export class TaskContainerHeader extends React.Component {
 					}></Button>
 				</div>
 				<div>
-					<Button text={ "All" } onClick={
+					<Button text={ "All" } color={"default"} onClick={
 						e=>{
 							e.preventDefault()
 							this.props.filterAll()
@@ -48,7 +48,7 @@ export class TaskContainerHeader extends React.Component {
 				</div>
 				<div>
 					<center>
-						<Button icon={ "delete" }  onClick={e=>
+						<Button icon={ "delete" }  color={"red"} onClick={e=>
 							{
 								e.preventDefault()
 								this.props.removeTask()

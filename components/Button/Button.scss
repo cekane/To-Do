@@ -1,15 +1,28 @@
 $borderColor: #BBDEFB;
+$green: #4CAF50;
 $bgColor: #42A5F5;
+$red: #F44336;
 
 .button {
 	margin:5px;
-	background: $bgColor;
 	border-radius:20px;
 	text-align: center;
 	cursor:pointer;
-	
+	box-shadow: 0 .375em .313em -0.313em rgba(0,0,0,.8), inset 0 .063em rgba(255,255,255,.4), inset 0 -0.188em rgba(0,0,0,.15);
 	height:100%;
 	min-width: 50px;
+}
+
+.greenBtn {
+	background-color: $green;
+}
+
+.redBtn{
+	background-color: $red;
+}
+
+.defaultBtn {
+	background-color: $bgColor;
 }
 
 .button:hover{

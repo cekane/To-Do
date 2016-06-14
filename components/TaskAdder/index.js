@@ -18,7 +18,7 @@ export class TaskAdder extends React.Component {
 				
 				<input className={ className(ta, "form-control") } type="text" onChange={e=>{this.setState({text: e.target.value})}} placeholder="Add Task" value={this.state.text}/>
 				
-				<Button icon= { "add" }  onClick={e=>
+				<Button icon= { "add" }  color={"green"} onClick={e=>
 					{
 						e.preventDefault()
 						this.props.addTask(this.state.text)
