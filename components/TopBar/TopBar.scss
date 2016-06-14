@@ -1,5 +1,5 @@
 $hover-color: #3c3c3c;
-$bgColor: #009688;
+$bgColor: #2196F3;
 
 .topBar {
   text-align: center;
@@ -23,7 +23,7 @@ $bgColor: #009688;
   z-index: 8999;
 	top: 0;
   width:100%;
-  background: linear-gradient(90deg, $bgColor 0%, #26A69A 80%, #4DB6AC 100%);
+  background: linear-gradient(90deg, $bgColor 0%, #64B5F6 80%, #E3F2FD 100%);
   box-shadow: 0px 3px 3px -2px rgba(50, 50, 50, 0.75);
 }
 

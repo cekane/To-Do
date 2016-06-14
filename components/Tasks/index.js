@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { tch, istyle, lstyle, fstyle } from './Tasks.scss'
+import { tch, istyle, lstyle, fstyle, bstyle } from './Tasks.scss'
 import { Button } from '../Button'
 import { Select, Case } from '../Select'
 

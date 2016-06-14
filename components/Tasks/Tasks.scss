@@ -1,4 +1,4 @@
-$borderColor: #009688;
+$borderColor: #42A5F5;
 .tch{
 	width:100%;
 	min-height: 35px;
@@ -23,5 +23,9 @@ h3.fstyle{
 }
 
 input.istyle{
+	display:inline-block;
+}
+
+.bstyle{
 	display:inline-block;
 }
